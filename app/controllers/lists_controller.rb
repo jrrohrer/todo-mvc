@@ -11,6 +11,7 @@ class ListsController < ApplicationController
         # params has all the data passed by the user
         @list = List.find(params[:id])
         # reads the ID value from the URL to know which list to show
+        @item = @list.items.build
     end
 
     def create

@@ -18,6 +18,11 @@ Lists controller
     - make items in a list real
         - a list has many items and a item belongs to a list
     - items table: id, description, list_id(foreign key)
+    - Create action for an Item on a list:
+        - The form is already present in the list show page
+        - What URL does this form imply? POST /lists/:id/items
+        ** An item doesn't exist in our app outside of the context of the list it belongs to-- NESTED RESOURCE **
+            - Items are nested in terms of URLs under their parent list
 
 I need an items table--  how are items associated to lists?
 Create action for an item in a list--  what is the URL/HTTP method for that?
