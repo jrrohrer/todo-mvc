@@ -16,9 +16,14 @@ class ListsController < ApplicationController
 
     def create
         @list = List.new(list_params)
-        @list.save
+        if @list.save # if list is valid
+            redirect_to list_path(@list) # create list and redirect to the list's show page
+        else # otherwise
+            @lists = List.all # re-populate the list of lists
+            render :index # render the index page
+        end
 
-        redirect_to list_path(@list)
+        
     end
 
     private

@@ -28,6 +28,14 @@ I need an items table--  how are items associated to lists?
 Create action for an item in a list--  what is the URL/HTTP method for that?
 Don't need a show page for items because they appear on a list's show page
 
+## Step 4: Adding Validations
+    - lists must have a name
+    - items must have a description
+
+## Step 5: Add a state (complete/incomplete) to items on a list
+    - Marking items complete/incomplete
+
+## Step 6: Delete items from a list
 ----
 
 lists model

@@ -3,7 +3,9 @@
 		<h1>Your Lists</h1>
 		
         <%= form_for(@list) do |f| %>
-            <%= f.text_field :name, :class => "new-todo" %>
+            <%= f.text_field :name, class: "new-todo", placeholder: (@list.errors.full_messages_for(:name).first || "Enter a new list name...") %>
+            <!-- placeholder will display the first error message in the error messages array as a string if there are errors, or it will display 
+            placeholder text if there are not. .first returns a string. -->
         <% end %>
     </header>
 
