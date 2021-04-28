@@ -12,8 +12,16 @@ Lists controller
     - doubling as my 'new' action in that it is presenting the person with a form to create a new list
     #create
     - create a list
+    - show a list
 
-- show a list
+## Step 3: Add Items to a List
+    - make items in a list real
+        - a list has many items and a item belongs to a list
+    - items table: id, description, list_id(foreign key)
+
+I need an items table--  how are items associated to lists?
+Create action for an item in a list--  what is the URL/HTTP method for that?
+Don't need a show page for items because they appear on a list's show page
 
 ----
 
